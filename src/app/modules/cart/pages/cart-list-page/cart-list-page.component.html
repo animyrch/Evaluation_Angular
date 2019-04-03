@@ -1,0 +1,13 @@
+<h1>Produits dans le panier</h1>
+<div *ngIf="cartProducts.length !== 0">
+    <app-cart-card 
+    *ngFor="let cartProduct of cartProducts" 
+    [product]="cartProduct"
+    (onDeleteCartItem)="deleteCartItem($event)"></app-cart-card>
+    <div>Prix total : {{ calculatedTotalPrice }} €</div>
+</div>
+
+<div *ngIf="cartProducts.length == 0">
+    Aucun produit à afficher
+</div>
+

@@ -1,0 +1,20 @@
+<div class="productCard">
+    <div class="productQuantity">
+      Quantité
+        <select (change)="onChange($event.target.value)">
+          <option *ngFor="let i of counter">{{i}}</option>
+        </select>
+      </div>
+  <div (click)="addToCart()" class="productContainer">
+    <img width="120" alt="product-image" [src]="imgLink">
+    <div class="productDetails">
+      <div>{{product.title}}</div>
+      <div>{{product.description}}</div>
+      <div>{{product.price}} €</div>
+    </div>
+   
+    
+  </div>
+  <button (click)="delete()">Supprimer le produit de la liste</button>
+  <button (click)="update()">Mettre à jour le produit</button>
+</div>

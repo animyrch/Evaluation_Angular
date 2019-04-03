@@ -1,0 +1,21 @@
+<h2>Edition de produit</h2>
+
+<form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+  <input type="text" placeholder="nom du produit" formControlName="title">
+  <input type="text" placeholder="description du produit" formControlName="description">
+  <input type="text" placeholder="prix du produit" formControlName="price">
+  <select formControlName="type">
+    <option *ngFor="let type of productTypes" [ngValue]="type">{{type}}</option>
+  </select>
+  <button type="submit">Save</button>
+</form>
+
+
+<!-- 
+id : string,
+title : string,
+description : string,
+price : number,
+quantity? : number,
+type : string
+-->

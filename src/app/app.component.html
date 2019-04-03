@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <ul>
+    <li class="d-ib">
+      <a [routerLink]="['/product/list']">Produits</a>
+    </li>
+    <li class="d-ib pl-10">
+      <a [routerLink]="['/cart/list']">Cart</a>
+    </li>
+  </ul>
+
+<router-outlet></router-outlet>

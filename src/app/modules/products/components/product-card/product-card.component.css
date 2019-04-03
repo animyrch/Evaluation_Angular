@@ -1,0 +1,13 @@
+img{
+    margin : 10px;
+}
+.productCard{
+    margin : 15px auto 15px auto;
+    width : 75%;
+}
+.productContainer {
+    border : 1px solid lightblue;
+}
+.productDetails {
+    display : inline-block;
+}

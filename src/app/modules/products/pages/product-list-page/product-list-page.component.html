@@ -1,0 +1,14 @@
+<h1>La liste des produits offerts</h1>
+<h4>Cliquer sur le produit souhaité pour l'ajouter à votre panier</h4>
+<button routerLink="/product/create">Créer un nouveau produit</button>
+<div *ngIf="products.length !== 0">
+    <app-product-card 
+    *ngFor="let product of products" 
+    (onDelete)="deleteProduct($event)" 
+    (onUpdate)="updateProduct($event)"
+    [product]="product"></app-product-card>
+</div>
+
+<div *ngIf="products.length == 0">
+    Aucun produit à afficher
+</div>

@@ -1,0 +1,9 @@
+.cartCard{
+    text-align: right;
+    margin-right : 50px;
+}
+.productDetail {
+    display : inline-block;
+    margin : 15px;
+    
+}
